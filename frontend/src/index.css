@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0A0A0F;
+  --surface: #12121A;
+  --surface2: #1C1C28;
+  --border: #252535;
+  --gold: #F4C842;
+  --teal: #2DD4BF;
+  --text: #E8E8F0;
+  --muted: #7070A0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+@layer utilities {
+  .font-display { font-family: 'DM Serif Display', serif; }
+  .font-mono-code { font-family: 'JetBrains Mono', monospace; }
+}
