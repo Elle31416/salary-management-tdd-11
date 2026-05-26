@@ -18,7 +18,6 @@ A production-grade HR compensation tool for 10,000 employees.
 - **Paginated table** — 20/page, server-side search & filters (country, status)
 - **5 insight endpoints** — salary by country, by title, distribution, headcount, top-paid
 - **Animated dashboard** — KPI cards, bar charts, distribution chart, pie chart
-- **TDD** — 20 tests covering all routes + edge cases
 
 ---
 
