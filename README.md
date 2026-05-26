@@ -119,35 +119,6 @@ salary-mgmt/
 
 ---
 
-## Deployment
-
-### Backend → Render.com
-1. New Web Service → connect repo
-2. Build command: `pip install -r backend/requirements.txt`
-3. Start command: `uvicorn app.__init__:app --host 0.0.0.0 --port $PORT`
-4. Root dir: `backend/`
-
-### Frontend → Vercel
-1. Import repo → set root to `frontend/`
-2. Set env var `VITE_API_URL` to your Render URL
-3. Update `vite.config.js` proxy to use env var
 
 ---
 
-## Commit Sequence (TDD)
-
-```
-1. feat: project scaffold + DB model + database config
-2. test: add employee returns 201 / feat: POST /employees
-3. test: list employees pagination / feat: GET /employees
-4. test: update employee partial / feat: PUT /employees
-5. test: delete employee / feat: DELETE /employees
-6. feat: salary-by-country insight endpoint
-7. feat: salary-distribution insight endpoint
-8. feat: top-paid-titles + headcount insights
-9. feat: seed script 10k employees bulk insert
-10. feat: React employees table + pagination
-11. feat: add/edit employee modal
-12. feat: insights dashboard with charts
-13. deploy: Render backend + Vercel frontend
-```
