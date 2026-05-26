@@ -1,6 +1,12 @@
 import axios from 'axios'
 
-const api = axios.create({ baseURL: '/api' })
+// In production (Vercel) VITE_API_URL = https://salary-management-tdd.onrender.com
+// In development the Vite proxy rewrites /api → localhost:8000
+const BASE = import.meta.env.VITE_API_URL
+  ? `${import.meta.env.VITE_API_URL}/api`
+  : '/api'
+
+const api = axios.create({ baseURL: BASE })
 
 // Employees
 export const fetchEmployees = (params) =>
